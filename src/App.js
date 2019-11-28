@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from 'react';
+import Home from './screens/home/Home';
+import Nav from './screens/nav/Nav';
+import Login from './screens/login/Login';
 
 function App() {
+  const [tab, setTab] = useState({tab1: "Home"})
+
+  function onClickFunction(tab2) {
+    setTab({tab1: tab2})
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav tab3={tab.tab1} onClickFunction={onClickFunction}/>
+      {tab.tab1 === "Home" ? <Home/> : <Login/>}
     </div>
-  );
+  );  
 }
 
 export default App;
