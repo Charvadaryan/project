@@ -7,7 +7,7 @@ function BloggerCard({ bloggers }) {
 		<div>
 			{bloggers.map(blogger => {
 				return (
-					<div className="card" >
+					<div className="card" key={blogger.id}>
 						<img src="..." className="card-img-top" alt="." />
 						<div className="card-body">
 							<h5 className="card-title">{blogger.lastname}</h5>

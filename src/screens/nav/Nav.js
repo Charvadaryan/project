@@ -10,6 +10,9 @@ const Nav = ({onClickFunction, tab3}) => {
                 <li className="nav-item">
                     {(tab3 === "Home") ? <a onClick={onClickFunction.bind(null, "Login")} className="nav-link" href="#">Login</a> : null}
                 </li>
+                <li className="nav-item">
+                     <a  className="nav-link" href="#">registration</a> 
+                </li>
             </ul>
         </div>
     )

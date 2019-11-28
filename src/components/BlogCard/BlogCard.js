@@ -6,7 +6,7 @@ function BlogCard({ posts }) {
         <div>
             {posts.map(blog => {
                 return (
-                    <div className="card" >
+                    <div className="card" key={blog.id}>
                     <div className="card-body">
                         <h5 className="card-title">{blog.title}</h5>
                         <p className="card-text">{blog.description}</p>
